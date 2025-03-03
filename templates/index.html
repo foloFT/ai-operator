@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Operator - ChatGPT & Claude</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Operator</h1>
+            <p>Confronta le risposte di ChatGPT e Claude in tempo reale</p>
+        </header>
+        
+        <section class="query-section">
+            <form id="query-form">
+                <textarea id="prompt-input" placeholder="Inserisci la tua domanda qui..."></textarea>
+                <button type="submit" id="submit-btn">Invia</button>
+            </form>
+        </section>
+        
+        <section class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Elaborazione in corso...</p>
+        </section>
+        
+        <section class="results-section" id="results">
+            <div class="result-box">
+                <h2>ChatGPT</h2>
+                <div id="chatgpt-response" class="response"></div>
+            </div>
+            
+            <div class="result-box">
+                <h2>Claude</h2>
+                <div id="claude-response" class="response"></div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>AI Operator - Sviluppato con Flask</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
